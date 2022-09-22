@@ -91,7 +91,7 @@ impl OpenGl {
         Self::new_from_context(context, true)
     }
 
-    fn new_from_context(context: glow::Context, is_opengles_2_0: bool) -> Result<Self, ErrorKind> {
+    pub fn new_from_context(context: glow::Context, is_opengles_2_0: bool) -> Result<Self, ErrorKind> {
         let debug = cfg!(debug_assertions);
         let antialias = true;
 
